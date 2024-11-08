@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "run":"nodemon app.js" 
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "mysql2": "^3.11.4",
+    "nodemon": "^3.1.7"
+  }
+}
