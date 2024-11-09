@@ -1,0 +1,72 @@
+/*Trabajo 100% css sin imports*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    position: relative;
+    object-fit: cover;
+    width: 100vh;
+    height: 100vh;
+}
+.contenedor{
+    position: absolute;
+    margin-top: 10%;
+    background-color: rgba(17, 17, 17, 0.932);
+    border: 2px solid green;
+    box-shadow: 10px 10px 205px 135px rgba(0,0,0,0.75);
+    border-radius: 25px;
+    height: 400px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 350px;
+}
+form h4{
+    margin-top: 60px;
+    width: 90%;
+    color: rgb(0, 124, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+form div{
+    margin-top: 60px;
+    width: 80%;
+}
+.ordenar label,br,input,button{
+    width: 100%;
+}
+.ordenar label{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 124, 0);
+}
+.ordenar input{
+    margin-bottom: 15px;
+    border-radius: 25px;
+    height: 28px;
+    background-color: rgba(0, 0, 0, 0.534);
+    color: rgb(35, 255, 35);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.ordenar button{
+    margin-top: 15px;
+    height: 35px;
+    font-size: 25px;
+    border-radius: 25px;
+    color: rgb(0, 124, 0);
+    border: 2px solid green;
+    background-color: rgba(0, 0, 0, 0.363);
+}
