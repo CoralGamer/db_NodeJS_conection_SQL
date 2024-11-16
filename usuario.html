@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Intranet Sukistrukis - Inicio</title>
+        <link rel="stylesheet" href="css/UX_UserJoined.css">
+    </head>
+    <body>
+        <img src="multimedia/background.png" alt="">
+        <div class="contenedor">
+            <h1>Bienvenido <span id="nombre_Usuario" class="n_u_head"></span>, a nuestra Intranet Sukistrukis</h1>
+            <button class="c_Session" id="cerrar">Cerrar Sesion</button>
+            <div class="cajas1"></div>
+            <div class="cajas1"></div>
+            <div class="cajas2"></div>
+            <div class="cajas1"></div>
+            <div class="cajas1"></div>
+            <div class="cajas2"></div>
+            <div class="cajas1"></div>
+            <div class="cajas1"></div>
+            <div class="cajas2"></div>
+        </div>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded",()=>{
+                fetch('/obtener-usuario')
+                .then(res=>res.json())
+                .then(usuario=>{
+                    document.getElementById('nombre_Usuario')
+                    .textContent=usuario.nombre
+                })
+                const cerrar=document.getElementById('cerrar')
+                cerrar.addEventListener('click',()=>{
+                    fetch('/cerrar',{
+                        method:'POST'
+                    })
+                    .then(res=>{
+                        if(res.ok){
+                            alert("La sesion ha sido cerrada correctamente")
+                            window.location.href='/iniciar.html'
+                        }
+                    })
+                })
+                window.onload=function(){
+                    window.history.forward()
+                }
+                window.onpageshow=function(event){
+                    if(event.persisted){
+                        window.location.reload()
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
